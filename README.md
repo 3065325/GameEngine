@@ -1,2 +1,2 @@
 # GameEngine
-An attempt at a TS based game engine.
+An attempt at an informal TS based game engine.
