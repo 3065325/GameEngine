@@ -88,7 +88,7 @@ class Board {
         return possibleMoves;
     }
 
-    public moveIn(tileIndex: number, amount: number): number | undefined {
+    private moveIn(tileIndex: number, amount: number): number | undefined {
         const differenceRatio: number = tileIndex/this.ColumnCount - amount;
         const isCrossed = Math.floor(0.5 * Math.sign(differenceRatio));
         const flooredDR = Math.floor(differenceRatio);
@@ -98,22 +98,22 @@ class Board {
         if (newTileIndex < this.ColumnCount*this.RowCount) return newTileIndex;
     }
 
-    public moveOut(tileIndex: number, amount: number): number | undefined {
+    private moveOut(tileIndex: number, amount: number): number | undefined {
         const newIndex = tileIndex + this.ColumnCount * amount;
         if (this.Tiles[newIndex]) return newIndex;
         
         return undefined;
     }
 
-    public moveRight(tileIndex: number, amount: number): number {
+    private moveRight(tileIndex: number, amount: number): number {
         return Math.floor(tileIndex / this.ColumnCount) * this.ColumnCount + (tileIndex + amount) % this.ColumnCount;
     }
 
-    public moveLeft(tileIndex: number, amount: number): number {
+    private moveLeft(tileIndex: number, amount: number): number {
         return Math.floor(tileIndex / this.ColumnCount) * this.ColumnCount + (tileIndex - amount) % this.ColumnCount;
     }
 
-    public moveDiagonalRightIn(tileIndex: number, amount: number) {
+    private moveDiagonalRightIn(tileIndex: number, amount: number) {
         const rowCount: number = this.RowCount - 1;
         const tileT: number = tileIndex % this.ColumnCount;
         const tileR: number = Math.floor(tileIndex / this.ColumnCount);
@@ -124,7 +124,7 @@ class Board {
         return mod(tileT - moveT + deltaRow, this.ColumnCount) + (rowCount - moveR)*this.ColumnCount;
     }
 
-    public moveDiagonalLeftIn(tileIndex: number, amount: number) {
+    private moveDiagonalLeftIn(tileIndex: number, amount: number) {
         const rowCount: number = this.RowCount - 1;
         const tileT: number = tileIndex % this.ColumnCount;
         const tileR: number = Math.floor(tileIndex / this.ColumnCount);
