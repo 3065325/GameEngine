@@ -1,1 +1,0 @@
-{"version":3,"file":"DestructionService.js","sourceRoot":"","sources":["../../TS/Services/DestructionService.ts"],"names":[],"mappings":"AACA,OAAO,iBAAiB,MAAM,wBAAwB,CAAC;AACvD,OAAO,eAAe,MAAM,6BAA6B,CAAC;AAE1D,MAAM,kBAAkB;IACb,MAAM,CAAC,OAAO,CAAC,MAAc;QAChC,iBAAiB,CAAC,cAAc,CAAC,MAAM,EAAE,eAAe,CAAC,QAAQ,CAAC,CAAC;IACvE,CAAC;CACJ;AAED,eAAe,kBAAkB,CAAC"}
